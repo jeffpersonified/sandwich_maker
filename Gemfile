@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails'
-end
+end 
 
 gem 'compass-rails'
 gem 'zurb-foundation'
@@ -19,8 +20,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do 
+  gem 'pg'
+end
+
 gem 'jquery-rails'
 gem 'thin'
-gem 'pg'
 gem 'debugger'
 gem 'devise'
