@@ -1,4 +1,3 @@
-<h1>Sandwich Me</h1>
+<h1>SandwichMe</h1>
 <h2>Easily order your next lunch.</h2>
-<p>Find me in app/views/pages/home.html.erb</p>
-<button class="button">Choose sandwich</button>
+<%= link_to "Choose sandwich", { controller: "orders", action: "new" }, class: "button" %>
