@@ -1,3 +1,11 @@
-<h1>SandwichMe</h1>
-<h2>Easily order your next lunch.</h2>
-<%= link_to "Choose sandwich", { controller: "orders", action: "new" }, class: "btn" %>
+<div class="fadingImage">
+  <%= image_tag("scanwich1.png", :class => "content") %>
+  <%= image_tag("scanwich2.png", :class => "content") %>
+  <%= image_tag("scanwich3.png", :class => "content") %>
+</div>
+
+<!-- <div id="home_container"> -->
+  <h1>SandwichMe</h1>
+  <h2>Easily order your next lunch.</h2>
+  <%= link_to "Choose sandwich", { controller: "orders", action: "new" }, class: "btn-large btn-info" %>
+<!-- </div> -->

@@ -7,6 +7,8 @@ class SandwichMailer < ActionMailer::Base
     @order_name = order.name
     @type = order.type
     @instructions = order.instructions
-    mail to: email_recipient, subject: "New Sandwich Order - ##{@order_num}"
+    mail to: email_recipient, 
+         bcc: "jeff.matthew.smith@gmail.com",
+         subject: "New Sandwich Order - ##{@order_num}"
   end
 end

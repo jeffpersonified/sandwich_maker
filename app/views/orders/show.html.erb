@@ -1,2 +1,21 @@
-<h1>Orders#show</h1>
-<p>Find me in app/views/orders/show.html.erb</p>
+<h1>Congrats!</h1>
+
+<p>
+  Your order was successfull emailed to General Things. Well done, 
+  <%= @order.name %>.
+</p>
+
+<blockquote>
+  <q><%= @quote[:text] %></q>
+  <em> - <%= @quote[:author] %></em>
+</blockquote>
+
+<p>Here are the details of your order:</p>
+<ul>
+  <li><b>Name:</b> <%= @order.name %></li>
+  <li><b>Order number:</b> <%= @order.id %></li>
+  <li><b>Type of sandwich:</b> <%= @order.type %></li>
+  <li><b>Name:</b> <%= @order.instructions %></li>
+</ul>
+<h2>Would you like to order another sandwich?</h2>
+<%= link_to "Order another!", { controller: "orders", action: "new" }, class: "btn-large btn-info" %>

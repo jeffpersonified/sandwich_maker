@@ -1,28 +1,26 @@
+<h1>New Sandwich Order</h1>
+  <%= form_for(@order, :html => { :class => "custom" }) do |f| %> 
+  <%= render 'shared/error_messages' %>
+  
+  <%= f.label :name, "Name for order?" %>
+    <%= f.text_field :name %> 
+
+  <%= f.label :type, "Type of sandwich?" %>    
+    <%= f.radio_button :type, 'meaty', checked: true %>
+    <%= f.label :type, "Meaty", value: "meaty" %>
+
+    <%= f.radio_button :type, 'vegetarian' %>
+    <%= f.label :type, "vegetarian", value: "vegetarian" %>
+
+    <%= f.radio_button :type, 'vegan' %>
+    <%= f.label :type, "Vegan", value: "vegan" %>
 
 
-    <h1>New Sandwich Order</h1>
-      <%= form_for(@order, :html => { :class => "custom" }) do |f| %> 
-      <%= render 'shared/error_messages' %>
-      
-      <%= f.label :name, "Name for order?" %>
-        <%= f.text_field :name %> 
+  <%= f.label :instructions, "Special Instructions?" %>
+    <%= f.text_area :instructions, :size => "20x5" %>
 
-      <%= f.label :type, "Type of sandwich?" %>    
-        <%= f.radio_button :type, 'meaty', checked: true %>
-        <%= f.label :type, "Meaty", value: "meaty" %>
-
-        <%= f.radio_button :type, 'vegetarian' %>
-        <%= f.label :type, "vegetarian", value: "vegetarian" %>
-
-        <%= f.radio_button :type, 'vegan' %>
-        <%= f.label :type, "Vegan", value: "vegan" %>
-
-
-      <%= f.label :instructions, "Special Instructions?" %>
-        <%= f.text_area :instructions %>
-
-      <br>
-      <%= f.submit "Send Order", class: "btn" %>    
-      <%= f.label :order, "(Orders sent to make_sandwich@generalthings.com)" %>  
-    <% end %>
+  <br>
+  <%= f.submit "Send Order", class: "btn btn-info" %>    
+  <%= f.label :order, "(Orders sent to make_sandwich@generalthings.com)" %>  
+<% end %>
 

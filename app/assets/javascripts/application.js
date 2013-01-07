@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+
+
+$(document).ready(function(){
+  function fadeImage (){
+    $(".fadingImage .content:hidden:first").fadeIn(500).delay(4000).fadeOut(500, function() {
+      $(this).appendTo($(this).parent());
+      fadeImage();
+    });
+  }
+  fadeImage();
+});
