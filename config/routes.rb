@@ -1,8 +1,6 @@
 MakeSandwich::Application.routes.draw do  
   
-  get "orders/new"
-
-  get "orders/show"
+  resources :orders
 
   root to: 'pages#home'
 end
