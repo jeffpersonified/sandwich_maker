@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
     if @order.save
-      # send email
+      sandwich_order = SandwichMailer.order("jeff.matthew.smith@gmail.com", @order).deliver
       redirect_to @order
     else
       render 'new'
