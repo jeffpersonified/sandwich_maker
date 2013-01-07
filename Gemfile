@@ -7,8 +7,9 @@ group :development, :test do
   gem 'rspec-rails'
 end 
 
-gem 'compass-rails'
-gem 'zurb-foundation'
+gem "therubyracer"
+gem "less-rails" 
+gem "twitter-bootstrap-rails"
 
 group :test do
   gem 'capybara'
