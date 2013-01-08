@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
     @quote = get_quote
     if @order.save
       p @quote
-      sandwich_order = SandwichMailer.order("jeff.matthew.smith@gmail.com", @order, @quote).deliver
+      sandwich_order = SandwichMailer.order("make_sandwich@generalthings.com", @order, @quote).deliver
       redirect_to @order
     else
       render 'new'
