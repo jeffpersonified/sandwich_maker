@@ -7,9 +7,14 @@
 
 <blockquote>
   <q><%= @quote[:text] %></q>
+  <br>
   <em> - <%= @quote[:author] %></em>
 </blockquote>
 
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://sandwich-me.herokuapp.com/" data-text="I just ordered a sandwich from General Things Inc." data-size="large" data-count="none" data-hashtags="sandwichme">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<br>
+<br>
 <p>Here are the details of your order:</p>
 <ul>
   <li><b>Name:</b> <%= @order.name %></li>

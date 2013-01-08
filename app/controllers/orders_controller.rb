@@ -10,9 +10,10 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(params[:order])
-
+    @quote = get_quote
     if @order.save
-      sandwich_order = SandwichMailer.order("jeff.matthew.smith@gmail.com", @order).deliver
+      p @quote
+      sandwich_order = SandwichMailer.order("jeff.matthew.smith@gmail.com", @order, @quote).deliver
       redirect_to @order
     else
       render 'new'

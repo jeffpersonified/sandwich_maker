@@ -1,8 +1,11 @@
 class SandwichMailer < ActionMailer::Base
   default from: "from@example.com"
   
-  def order(email_recipient, order)
+  def order(email_recipient, order, quote)
     @greeting = "Hi"
+    @quote = quote
+    p quote
+    p @quote
     @order_num = order.id
     @order_name = order.name
     @type = order.type

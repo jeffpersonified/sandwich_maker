@@ -5,7 +5,8 @@
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
   */
-
+  
+/*
 .content {
   display: none;
 }
@@ -16,8 +17,9 @@ html {
 
 body {
   background-color: black;
-  font-size: 16px;
-  /*color: #555557;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #555557;
 }
 
 .row-fluid {
@@ -74,3 +76,4 @@ blockquote {
   margin: 0 0 20px;
   border-left: 25px solid #424141;
 }
+*/
