@@ -22,8 +22,9 @@ html {
 
 body {
   background-color: black;
-  font-size: 16px;
-  /*color: #555557;*/
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #555557;
 }
 
 .row-fluid {

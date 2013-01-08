@@ -26,12 +26,3 @@ describe Order do
     it { should_not be_valid }
   end
 end
-
-  # create_table "orders", :force => true do |t|
-  #   t.string   "name"
-  #   t.string   "type"
-  #   t.string   "options"
-  #   t.text     "instructions"
-  #   t.datetime "created_at",   :null => false
-  #   t.datetime "updated_at",   :null => false
-  # end

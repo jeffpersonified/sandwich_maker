@@ -6,7 +6,7 @@ describe "Order pages" do
   describe "new order page" do
     before { visit new_order_path }
     let(:submit) { "Send Order"}
-    # it { should have_selector('h1', text: "New Sandwich Order") }
+    it { should have_selector('h1', text: "New Sandwich Order") }
 
     context "with invalid information" do
       it "should not create an order" do

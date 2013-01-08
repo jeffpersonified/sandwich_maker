@@ -4,8 +4,6 @@ class SandwichMailer < ActionMailer::Base
   def order(email_recipient, order, quote)
     @greeting = "Hi"
     @quote = quote
-    p quote
-    p @quote
     @order_num = order.id
     @order_name = order.name
     @type = order.type
